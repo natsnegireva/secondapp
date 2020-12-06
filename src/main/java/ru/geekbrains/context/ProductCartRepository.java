@@ -1,9 +1,11 @@
 package ru.geekbrains.context;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Component
 public class ProductCartRepository implements ProductRepo {
     private static final List<Product> cartList = new ArrayList<>();
     private ProductRepository productRepository = null;
@@ -12,7 +14,6 @@ public class ProductCartRepository implements ProductRepo {
         this.productRepository = productRepository;
         clearCart();
     }
-
 
     @Override
     public List<Product> getProduct() {

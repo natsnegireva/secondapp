@@ -1,6 +1,5 @@
 package ru.geekbrains.context;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,11 +8,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan("ru.geekbrains.context")
 public class AppConfig {
-    private ProductRepository productRepository;
 
-    @Bean
-    public ProductCartRepository productCartRepository(ProductRepository productRepository) {
-        ProductCartRepository productCartRepository = new ProductCartRepository(productRepository);
-        return productCartRepository;
-    }
+//    @Bean
+//    public ProductCartRepository productCartRepository(ProductRepository productRepository) {
+//        ProductCartRepository productCartRepository = new ProductCartRepository(productRepository);
+//        return productCartRepository;
+//    }
 }

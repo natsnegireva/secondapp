@@ -4,12 +4,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.util.Collections;
 
 
-public class MainApp {
+public class CartApp {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-//        ProductRepository productRepository = context.getBean("productRepository", ProductRepository.class);
-//        System.out.println(productRepository.getProduct());
         ProductCartRepository productCartRepository = context.getBean("productCartRepository", ProductCartRepository.class);
         System.out.println(productCartRepository.addProduct(1));
         System.out.println(productCartRepository.addProduct(2));
@@ -20,7 +18,7 @@ public class MainApp {
         System.out.println(productCartRepository.addProduct(2));
 
 
-            context.close();
+        context.close();
         }
     }
 
